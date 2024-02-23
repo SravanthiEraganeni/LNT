@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Button Color Change</title>
+<style>
+    .color-change-button {
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        outline: none;
+    }
+
+    /* Optional: Adding a hover effect to the button */
+    .color-change-button:hover {
+        opacity: 0.8;
+    }
+</style>
+</head>
+<body>
+
+<button class="color-change-button" id="changeColorButton">Click me!</button>
+
+<script>
+// Function to generate a random color
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+// Function to change the color of the button
+function changeButtonColor() {
+    var newColor = getRandomColor();
+    document.getElementById('changeColorButton').style.backgroundColor = newColor;
+}
+
+// Add event listener to the button
+document.getElementById('changeColorButton').addEventListener('click', changeButtonColor);
+</script>
+
+</body>
+</html>
