@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Button Color Change</title>
+</style>
     .color-change-button {
         padding: 10px 20px;
         font-size: 16px;
@@ -48,3 +49,4 @@ document.getElementById('changeColorButton').addEventListener('click', changeBut
 
 </body>
 </html>
+//the end
